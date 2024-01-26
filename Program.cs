@@ -6,22 +6,22 @@
         {
             for (int vypsaneCislo = 1; vypsaneCislo <= 100; vypsaneCislo++)
             {
-                if (vypsaneCislo % 5 == 0 && vypsaneCislo % 3 == 0)
+                string vystup = string.Empty; 
+                
+                
+                if (vypsaneCislo % 3 == 0)
                 {
-                    Console.WriteLine("BumBac");
+                    vystup = "Bum";
                 }
-                else if (vypsaneCislo % 3 == 0)
+                if (vypsaneCislo % 5 == 0)
                 {
-                    Console.WriteLine("Bum");
+                    vystup += "Bac";
                 }
-                else if (vypsaneCislo % 5 == 0)
+                if (vystup == string.Empty) 
                 {
-                    Console.WriteLine("Bac");
+                    vystup = vypsaneCislo.ToString();
                 }
-                else
-                {
-                    Console.WriteLine(vypsaneCislo);
-                }
+                Console.WriteLine(vystup);
             }
         }
     }
